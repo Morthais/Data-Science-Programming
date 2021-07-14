@@ -14,8 +14,5 @@ starwars = pd.read_csv(url)
 starwars = pd.read_csv(url, encoding="utf-8")
 
 #%%
-# WARNING: ISO-8859-1 ENCODING DOES WORK
+# NOTE: ISO-8859-1 ENCODING DOES WORK
 starwars = pd.read_csv(url, encoding="ISO-8859-1")
-
-# %%
-starwars_data = pd.read_csv(url, encoding="ISO-8859-1")

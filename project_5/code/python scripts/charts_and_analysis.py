@@ -4,7 +4,7 @@ import pandas as pd
 import altair as alt
 
 # data url
-starwars_file_path = "starwars_temp.csv"
+starwars_file_path = "../../data/raw_data/StarWars.csv"
 
 # load data and columns
 starwars = pd.read_csv(starwars_file_path, encoding = "ISO-8859-1", skiprows = 2, header = None)
@@ -14,9 +14,9 @@ starwars_cols = pd.read_csv(starwars_file_path, encoding = "ISO-8859-1", nrows =
 # clean up the column names
 column_names_1 = starwars_cols.iloc[0,:]
 column_names_1 = (column_names_1
-                  .replace("Have you seen any of the 6 films in the Star Wars franchise?", "have_seen_any")
-                     .replace("Which of the following Star Wars films have you seen? Please select all that apply.", "seen_film_")
-                     .replace("Which character shot first?", "shot_first")
+                  .replace("Have you seen any of the 6 films in the Star Wars franchise?", "seen_any_films?")
+                     .replace("Which of the following Star Wars films have you seen? Please select all that apply.", "seen_which_films?")
+                     .replace("Which character shot first?", "who_shot_first?")
                      .str.replace(" ", "_")
                      .str.replace("[(|)\?]", "")
                      .str.replace("æ", "")
