@@ -23,7 +23,7 @@ flights.isnull().sum()
 # minutes_delayed_carrier (nan), minutes_delayed_nas (nan AND -999)
 
 # Reformat the missing values
-flights_new = flights.replace('', np.nan).replace('n/a', np.nan).replace(-999, np.nan)
+flights_new = flights.replace('', np.nan).replace('n/a', np.nan).replace(-999, np.nan).replace('null', np.nan)
 
 # %%
 # Compare with the original to ensure the reformat worked

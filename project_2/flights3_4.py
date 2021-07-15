@@ -43,7 +43,9 @@ weather_delays = (flights
     )
 )
 
-weather_delays
+#%%
+# convert table to markdown
+print(weather_delays.head(5).to_markdown())
 
 #%%
 # What is the total number of flights delayed by any weather?

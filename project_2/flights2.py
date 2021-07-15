@@ -1,6 +1,7 @@
 #%%
 # import packages
 import altair as alt
+from altair.vegalite.v4.schema.channels import Row
 import pandas as pd
 import numpy as np
 
@@ -22,6 +23,7 @@ flights.columns
 # %%
 # Create a new data frame containing all data pertaining to delays, 
 # but group by month instead of by airport.
+# TODO: Order by Month
 best_months = (flights
     .groupby('month')
         .agg(
@@ -37,7 +39,7 @@ best_months = (flights
         .drop(labels=12, axis=0)
     )
 
-best_months
+best_months.sort_values(by="month", ascending=False)
 
 # %%
 # include one chart to help support your answer

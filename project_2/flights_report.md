@@ -42,9 +42,15 @@ According to the BTS website the “Weather”” category only accounts for sev
 a. 30% of all delayed flights in the Late-Arriving category are due to weather.
 b. From April to August, 40% of delayed flights in the NAS category are due to weather. The rest of the months, the proportion rises to 65%.
 
-<img src="Images/weather_delays_table.PNG">
+|    | airport_code   | month   |   severe |   mild_late |   mild_nas |   total_weather |   total_late |   percent_weather |   total_weather_sum |
+|---:|:---------------|:--------|---------:|------------:|-----------:|----------------:|-------------:|------------------:|--------------------:|
+|  0 | ATL            | January |      448 |      -299.7 |    2988.7  |         3137    |         4047 |          0.775142 |         1.06827e+06 |
+|  1 | DEN            | January |      233 |       278.4 |     607.75 |         1119.15 |         2096 |          0.533946 |         1.06827e+06 |
+|  2 | IAD            | January |       61 |       317.4 |     581.75 |          960.15 |         2014 |          0.476738 |         1.06827e+06 |
+|  3 | ORD            | January |      306 |       676.5 |    3519.75 |         4502.25 |         7976 |          0.564475 |         1.06827e+06 |
+|  4 | SAN            | January |       56 |       204   |     414.7  |          674.7  |         1374 |          0.491048 |         1.06827e+06 |
 
-*I had some trouble converting the table to markdown this time, so I took a snip of the table and posted it here. The total number of flights delayed by weather is labeled as total_weather_sum, which number is 1,068,267 flights delayed by weather.*
+*The total number of flights delayed by weather is labeled as total_weather_sum, which number is 1,068,267 flights delayed by weather.*
 
 #### Grand Question 4
 Create a barplot showing the proportion of all flights that are delayed by weather at each airport. Discuss what you learn from this graph.
@@ -56,25 +62,26 @@ Create a barplot showing the proportion of all flights that are delayed by weath
 #### Grand Question 5
 Fix all of the varied missing data types in the data to be consistent (all missing values should be displayed as “NaN”) and save the new data as a JSON file. Include one record example from your exported JSON file that has a missing value.
 [
-    &emsp;{
-        &emsp;&emsp;"airport_code": "SLC",
-        &emsp;&emsp;"airport_name": "Salt Lake City, UT: Salt Lake City International",
-        &emsp;&emsp;"month": "December",
+&emsp;{
+        &emsp;&emsp;"index": 911,
+        &emsp;&emsp;"airport_code": "DEN",
+        &emsp;&emsp;"airport_name": null,
+        &emsp;&emsp;"month": "November",
         &emsp;&emsp;"year": 2015.0,
-        &emsp;&emsp;"num_of_flights_total": 8804,
-        &emsp;&emsp;"num_of_delays_carrier": "483",
-        &emsp;&emsp;"num_of_delays_late_aircraft": 796.0,
-        &emsp;&emsp;"num_of_delays_nas": 404,
-        &emsp;&emsp;"num_of_delays_security": 5,
-        &emsp;&emsp;"num_of_delays_weather": 56,
-        &emsp;&emsp;"num_of_delays_total": 1745,
-        &emsp;&emsp;"minutes_delayed_carrier": 37354.0,
-        &emsp;&emsp;"minutes_delayed_late_aircraft": 49549,
-        &emsp;&emsp;"minutes_delayed_nas": 13515.0,
-        &emsp;&emsp;"minutes_delayed_security": 158,
-        &emsp;&emsp;"minutes_delayed_weather": 6693,
-        &emsp;&emsp;"minutes_delayed_total": 107269
-    &emsp;}
+        &emsp;&emsp;"num_of_flights_total": 17120,
+        &emsp;&emsp;"num_of_delays_carrier": "751",
+        &emsp;&emsp;"num_of_delays_late_aircraft": 1031.0,
+        &emsp;&emsp;"num_of_delays_nas": 1197,
+        &emsp;&emsp;"num_of_delays_security": 1,
+        &emsp;&emsp;"num_of_delays_weather": 93,
+        &emsp;&emsp;"num_of_delays_total": 3076,
+        &emsp;&emsp;"minutes_delayed_carrier": 54704.0,
+        &emsp;&emsp;"minutes_delayed_late_aircraft": 69918,
+        &emsp;&emsp;"minutes_delayed_nas": 50919.0,
+        &emsp;&emsp;"minutes_delayed_security": 63,
+        &emsp;&emsp;"minutes_delayed_weather": 9509,
+        &emsp;&emsp;"minutes_delayed_total": 185113
+&emsp;},
 ]
 
 ## Appendix A
